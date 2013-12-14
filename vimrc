@@ -19,3 +19,7 @@ set title
 set textwidth=79
 set wrap
 
+" Plugin: Solarized
+syntax enable
+set background=light
+colorscheme solarized
