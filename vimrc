@@ -23,3 +23,6 @@ set wrap
 syntax enable
 set background=light
 colorscheme solarized
+
+" Plugin: Gundo
+nnoremap <C-U> :GundoToggle<CR>
