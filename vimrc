@@ -30,6 +30,7 @@ set shiftwidth=2
 set softtabstop=2
 set autoindent
 set smartindent
+set cindent
 set backspace=indent,eol,start
 
 imap <lt><lt><Tab> <lt>/<C-X><C-O> "Closing HTML/XML tags
