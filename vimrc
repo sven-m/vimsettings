@@ -14,6 +14,7 @@ set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 set ruler "Always show cursor position
+set number " Always show line numbers
 
 set title "Set terminal title to filename
 
