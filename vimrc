@@ -35,6 +35,7 @@ set backspace=indent,eol,start
 
 imap <lt><lt><Tab> <lt>/<C-X><C-O> "Closing HTML/XML tags
 
+filetype plugin on
 
 set smartcase "Ignore case when typing lower case when searching
 set hlsearch
