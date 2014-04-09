@@ -7,9 +7,6 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = http://git.code.sf.net/p/vim-latex/vim-latex
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = git@github.com:vim-scripts/matchit.zip.git
 [submodule "bundle/vim-twig"]
 	path = bundle/vim-twig
 	url = git@github.com:lunaru/vim-twig.git
