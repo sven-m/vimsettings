@@ -6,7 +6,7 @@ execute pathogen#infect()
 set history=250
 
 " Allow switching buffers without writing to disk
-set hidden
+set nohidden
 
 set undodir=~/.vimundo
 set undofile
@@ -33,9 +33,11 @@ set smartindent
 set cindent
 set backspace=indent,eol,start
 
-imap <lt><lt><Tab> <lt>/<C-X><C-O> "Closing HTML/XML tags
+"Closing HTML/XML tags
+imap <lt><lt><Tab> <lt>/<C-X><C-O>
 
 filetype plugin on
+filetype indent on
 
 set smartcase "Ignore case when typing lower case when searching
 set hlsearch
@@ -49,18 +51,6 @@ set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 
 set so=14
 set encoding=utf8
-
-" Disable arrow keys during normal editing
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                                                             "
@@ -76,14 +66,7 @@ colorscheme solarized
 " Plugin: Gundo
 nnoremap <C-U> :GundoToggle<CR>
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""
-" Latex-Suite settings
-""""""""""""""""""""""""""""""""""""""""""""""""
-
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
-
+" Plugin: Latex-Suite
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
@@ -92,9 +75,6 @@ set shellslash
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
-
-" OPTIONAL: This enables automatic indentation as you type.
-filetype indent on
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -106,5 +86,8 @@ let g:tex_flavor='latex'
 " all the figure labels. Very useful!
 set iskeyword+=:
 
-let g:LatexBox_viewer = 'skim'
-let g:LatexBox_latexmk_options = '-pvc'
+" Plugin: Latex-Box
+let g:LatexBox_viewer = 'open -a /Applications/Skim.app'
+
+let g:LatexBox_latexmk_preview_continuously = 1
+map <buffer> <LocalLeader>LL :Latexmk<CR>
