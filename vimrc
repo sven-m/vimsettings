@@ -38,6 +38,7 @@ imap <lt><lt><Tab> <lt>/<C-X><C-O>
 
 filetype plugin on
 filetype indent on
+set omnifunc=syntaxcomplete#Complete
 
 set smartcase "Ignore case when typing lower case when searching
 set hlsearch
@@ -49,7 +50,7 @@ set visualbell
 
 set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif
 
-set so=14
+set so=5
 set encoding=utf8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,3 +92,7 @@ let g:LatexBox_viewer = 'open -a /Applications/Skim.app'
 
 let g:LatexBox_latexmk_preview_continuously = 1
 map <buffer> <LocalLeader>LL :Latexmk<CR>
+
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+
