@@ -28,3 +28,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
+[submodule "bundle/vim-raml"]
+	path = bundle/vim-raml
+	url = git@github.com:kennethzfeng/vim-raml.git
